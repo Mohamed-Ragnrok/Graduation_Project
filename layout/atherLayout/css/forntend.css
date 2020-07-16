@@ -1,0 +1,375 @@
+/* Start Main Rulez */
+
+
+
+h1 {
+	 font-size: 55px;
+	 margin :40px 0;
+	 font-weight: bold;
+	 color:#666 ;
+}
+.input-container{
+	position: relative;
+}
+
+.asterisk {
+    font-size: 20px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    color: #c0392b;
+}
+
+
+.main-form .asterisk {
+    font-size: 30px;
+    position: absolute;
+    right: 30px;
+    top: 8px;
+    color: #c0392b;
+}
+
+.main-form .col-sm-3{
+	padding: 10px 0 0 100px;
+}
+
+
+/* End Main Rulez */
+/*=====================*/
+/* Start Bootstrap Edits */
+  
+.form-control {
+	 position: relative;
+}
+
+/* end Bootstrap Edits */
+/*=====================*/
+/* start Header */
+
+/* end Header */
+/*=====================*/
+/*start Login Page */
+.login-page form,
+.the-errors {
+	max-width: 425px ;
+	margin: auto;
+
+}
+
+.the-errors .alert{
+	height: 34px;
+	padding: 6px;
+    margin-bottom: 10px;
+}
+
+.login-page form input{
+	margin-bottom: 10px;
+}
+
+.login-page [data-class ="login"].selected{
+	color: #337ab7;
+}
+
+.login-page [data-class ="signup"].selected{
+	color: #5cb85c;
+}
+
+.login-page h1{
+	color: #C0C0C0;
+}
+
+.login-page h1 span{
+	cursor: pointer;
+}
+
+.login-page .signup {
+	display: none;
+}
+
+/* End Login Page */
+/*=======================*/
+/* start categories Page */
+.item-box {
+	position: relative;
+	    height: 470px;
+
+}
+
+.item-box .price-tag {
+	background-color: #B4B4B4;
+	padding: 2px 10px;
+	position: absolute;
+	left: 0;
+	top: 10px;
+	font-weight: bold;
+	color: #FFF;
+
+}
+
+.item-box .price-tag1 {
+	background-color: #dae1e7;
+	padding: 2px 10px;
+	position: absolute;
+	right: 0;
+	top: 10px;
+	font-weight: bold;
+	color: #FFF;
+
+}
+
+.item-box .approve-status{
+	position: absolute;
+	top: 40px;
+	left: 0;
+	background-color: #b85a5a;
+	color: #FFF;
+	padding: 3px 5px;
+}
+
+.item-box .caption p {
+	height: 40px;
+	max-height: 40px;
+	overflow: auto;
+}
+
+.item-box .caption h3 {
+	max-height: 35px;
+	overflow: auto;
+}
+
+
+
+.item-box img {
+	width: 300px;
+    height: 315px;
+}
+
+/* end categories Page */
+/*=====================*/
+/* Start Profile Page */
+.information {
+	margin-top :20px ;
+}
+
+.information ul{
+	padding: 0;
+	margin : 0;
+}
+
+.information ul li {
+	padding: 10px;
+}
+
+.information ul li:nth-child(odd){
+	background-color: #EEE;
+}
+
+.information ul li span{
+	display: inline-block;
+	/* width: 120px; */
+}
+
+.thumbnail .date{
+	text-align: right;
+	font-size: 13px;
+	color: #AAA;
+	font-weight: bold;
+}
+
+.information .btn {
+	margin-top: 10px;
+}
+
+
+
+/* End Profile Page */
+/*===================*/
+/* Start Show Item Page */
+.item-info h2 {
+	padding: 10px;
+	margin: 0;
+}
+
+.item-info p {
+	padding: 10px;
+}
+
+.item-info ul li {
+	padding: 10px;
+}
+
+.item-info ul li:nth-child(odd){
+	background-color: #e8e8e8;
+}
+
+.item-info ul li span{
+	display: inline-block;
+	/* width: 120px; */
+}
+
+.tags-item a {
+	display: inline-block;
+	background-color: #e2e2e2;
+	padding: 2px 10px;
+	border-radius: 5px;
+	color: #666;
+	margin-right: 5px;
+}
+
+.add-comment h3{
+	margin: 0 0 10px;
+}
+
+.add-comment textarea{
+	display: block;
+	margin-bottom: 10px;
+	width: 360px;
+	height: 120px;
+}
+
+.comment-box {
+	margin-bottom: 20px;
+}
+.comment-box a {
+	font-weight: bold;
+}
+
+.comment-box img{
+    width: 80px;
+    height: 80px;
+	margin-bottom: 10px;
+}
+
+.comment-box .lead{
+	background-color: #d1d5d8 ;
+	position: relative;
+	padding: 10px;
+	margin-top: 25px;
+	
+	
+}
+
+
+.comment-box .lead:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-width: 15px;
+	border-style: solid;
+	border-color: transparent #d1d5d8 transparent transparent;
+	position: absolute;
+	left: -28px;
+	top: 10px;
+}
+
+/* End Show Item Page */
+/*=====================*/
+/* Start Our Custom */
+.custom-hr{
+	border-top: 1px solid #c9c9c9;
+}
+/* End Our Custom */
+/*===================*/
+/* start Contact form */
+
+.alert{
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    max-width: 750px;
+    margin: 30px auto;
+}
+
+.contact-form h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    letter-spacing: -2px;
+    color: #757575;
+}
+
+.contact-form .form-group{
+    margin-bottom: 0;
+    position: relative;
+}
+
+.contact-form input {
+    padding-left: 33px;
+}
+
+.contact-form input ,
+.contact-form textarea{
+    margin-bottom: 5px;
+}
+
+.contact-form textarea{
+    height: 180px !important;
+}
+
+.contact-form input:not([type='submit']) + i {
+    height: 0;
+    float: left;
+    position: relative;
+    top: -28px;
+    left: 9px;
+    color: #999;
+}
+
+/* الجزء الخاص اذا كان الحقل اجباري بواسطه html   */ 
+.contact-form .form-group i{
+	height: 0;
+    float: left;
+    position: relative;
+    top: -28px;
+    left: 9px;
+    color: #999;
+}
+
+.contact-form .asterisx {
+    height: 0;
+    font-size: 22px;
+    color: #b90d0d;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}
+
+
+.contact-form .send-icon{
+    display: block;
+    position: relative;
+    top: -28px;
+    left: 9px;
+    color: #fff;
+}
+
+.contact-form .custom-alert{
+    padding: 5px 10px;
+    display: none;
+}
+/*End Contact Form */
+
+/* Edit With Me */
+
+.navbar{
+	margin-bottom: 50px;
+}
+
+.informection{
+margin-top: 8px;
+}
+.informection ul{
+	padding: 0;
+}
+.informection img {
+	margin-right: 1px;
+}
+
+.navbar-form{
+	padding: 0;
+}
+.navbar-header a {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}

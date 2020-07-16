@@ -1,0 +1,208 @@
+<?php
+session_start();
+    /*
+    ================================================
+       Student Page
+    ================================================
+    */
+    ob_start(); // Output Buffering Start
+
+    $pageTitle = '€Ì«» ÊÕ÷Ê— «·ÿ·«»';
+    $nonavbar = "" ;
+
+
+    if (isset($_SESSION['Username'])){
+        include "init.php";
+        if ($_SERVER['REQUEST_METHOD'] == 'GET'){
+            $courses=$_GET['courses'];
+        }
+
+        ?>
+        
+        <div class="main_content_container" style="width : 21sm;">
+            <!-- <h1 class="heading_title">ÿ·«» «·ﬁ”„</h1>-->
+                <div class="table-responsive">
+                    <table style="width : 21sm;" class="main-table manage-members table-center table table-bordered">
+                        <thead>
+                            <td style="font-size: 10px; width : 5%;">—ﬁ„</td>
+                            <td style="font-size: 10px; width : 25%;"> «·«”„</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 1</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 2</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 3</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 4</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 5</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 6</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 7</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 8</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 9</td>
+                            <td style="font-size: 10px; width : 7%;">„‹ 10</td>
+                        </thead>
+                        <?php
+
+                        $stu_attendance= getAllFrom("*","student , levels , courses ,departments","WHERE student.level_id = levels.id AND courses.level_id = levels.id AND departments.id = courses.dep_ip AND departments.id = student.department AND courses.id ={$courses} " , "stu_id" , "ASC");
+                        $count = 1 ;
+                        
+                        foreach($stu_attendance as $stu){
+                        
+                        echo "<tr>";
+
+                            echo  '<td style="font-size: 10px; width : 5px;"> '. $count++ .'</td>';
+                            echo  '<td style="font-size: 10px;"> '. $stu['stu_name'] .'</td>';
+
+
+                            $stu_report= getAllFrom("*","student , levels , courses ,departments , recourses","WHERE student.level_id = levels.id AND courses.level_id = levels.id AND departments.id = courses.dep_ip AND departments.id = student.department AND recourses.stud_id = student.stu_id AND recourses.courses_id = courses.id AND courses.id ={$courses} AND student.stu_id = {$stu['stu_id']} " , "stu_id" , "ASC");
+                            // Lecture 1
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace1"';
+                            foreach($stu_report as $report){
+                                if($report['day_1'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 2
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace2"';
+                            foreach($stu_report as $report){
+                                if($report['day_2'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 3
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace3"';
+                            foreach($stu_report as $report){
+                                if($report['day_3'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 4
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace4"';
+                            foreach($stu_report as $report){
+                                if($report['day_4'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 5
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace5"';
+                            foreach($stu_report as $report){
+                                if($report['day_5'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 6
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace6"';
+                            foreach($stu_report as $report){
+                                if($report['day_6'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 7
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace7"';
+                            foreach($stu_report as $report){
+                                if($report['day_7'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 8
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace8"';
+                            foreach($stu_report as $report){
+                                if($report['day_8'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 9
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace9"';
+                            foreach($stu_report as $report){
+                                if($report['day_9'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+
+                            // Lecture 10
+                            echo  '<td style="font-size: 10px;"><input type="checkbox" name="attendace10"';
+                            foreach($stu_report as $report){
+                                if($report['day_10'] == 1){
+                                    echo ' value="1" checked>';
+                                }else{
+                                    echo ' value="0">';
+                                }
+                            }
+                            echo '</td>';
+                            
+                        echo "</tr>";
+                        };
+                        
+                        
+                        ?>
+                        
+                        <tfoot>
+                            <tr>
+                            <?php
+                            $info_courses= getAllFrom("*","levels , courses ,departments","WHERE courses.level_id = levels.id AND departments.id = courses.dep_ip AND courses.id ={$courses} " , "courses.id" , "ASC");
+                            foreach($info_courses as $info){
+                                echo '<td colspan="2" style="height : 60px;">«·„ﬁ—— :<br> '.$info['name'] .'</td>' ;
+                                echo '<td colspan="3" style="height : 60px;" >«·ﬁ”„ :<br> '.$info['dep_name'] . '</td>' ;
+                                echo '<td colspan="2" style="height : 60px;" >«·œ›⁄… :<br> '.$info['title'] . '</td>';
+                                echo '<td colspan="2" style="height : 60px;" >œﬂ Ê— «·„«œ… :<br> ' .$info['dr_name'] . '</td>' ;
+                            }
+                            ?>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                </div>
+                <a title="Print Screen" alt="Print Screen" onclick="window.print();" target="_blank" style="cursor:pointer;" ><span class=" glyphicon glyphicon-print"> ÿ»«⁄…</span></a>
+
+
+                <!--/End Main content container-->
+        </div>
+            <!--/End body container section-->
+        </div>
+    </div>
+    <?php
+
+    }
+    else{
+
+        header('Location: index.php');
+
+        exit();
+    }
+
+
+
+    ob_end_flush(); // Release The Output
+
+?>
